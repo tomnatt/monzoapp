@@ -4,11 +4,14 @@
     <title>Monzoapp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', :media => 'all' %>
   </head>
 
   <body>
     <%= yield %>
+
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :javascripts %>
   </body>
 </html>
