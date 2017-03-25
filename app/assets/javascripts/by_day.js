@@ -24,7 +24,8 @@ $.getJSON('/data/byday', function(data) {
         yAxes: [{
           ticks: { min: 0 }
         }]
-      }
+      },
+      responsive: false,
     }
   });
 });
