@@ -1,11 +1,14 @@
 # Monzo app
 
-Playing with the Monzo API
+Playing with the Monzo API.
 
-Warning: some pretty horrible code that needs a refactor
+Environment variables needed:
+* `MONZO_ACCOUNT_ID`
+* `MONZO_ACCESS_TOKEN`
+
+Get these by logging into the [Monzo developer tool](https://developers.monzo.com).
 
 Ideas:
 
 * Spending by type by month in a doughnut chart (already in app)
 * Spending by type by week in a doughnut chart
-* Balance by day as a line graph
