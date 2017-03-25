@@ -35,4 +35,7 @@ class MonzoController < ApplicationController
       @spent = spent
     end
   end
+
+  def by_day
+  end
 end
