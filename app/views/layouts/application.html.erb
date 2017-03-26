@@ -10,9 +10,8 @@
   <body>
     <%= yield %>
 
-    <%= javascript_include_tag 'moment' %>
-    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' %>
     <%= yield :javascripts %>
   </body>
 </html>
