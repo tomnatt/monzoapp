@@ -8,6 +8,11 @@ Environment variables needed:
 
 Get these by logging into the [Monzo developer tool](https://developers.monzo.com).
 
+```
+bundle install
+bundle exec rails s
+```
+
 Ideas:
 
 * Spending by type by month in a doughnut chart (already in app)
