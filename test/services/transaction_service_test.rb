@@ -8,9 +8,9 @@ class TransactionServiceTest < ActiveSupport::TestCase
     assert_kind_of Mondo::Client, TransactionService.monzo_api, 'Returning object of the wrong type'
   end
 
-  # TODO: check we aren't creating monzo api objects over and over
+  # Check we aren't creating monzo api objects over and over
   def test_same_api_object
-    assert_equal TransactionService.monzo_api, TransactionService.monzo_api
+    assert_equal TransactionService.monzo_api, TransactionService.monzo_api, 'Do not want to create multiple API objects'
   end
 
   # Check the transactions method works
@@ -21,7 +21,8 @@ class TransactionServiceTest < ActiveSupport::TestCase
     assert_kind_of Mondo::Transaction, transactions.first, 'Response should be an array of Mondo::Transaction'
   end
 
-  # TODO: Cache the transactions response
-  # def test_cached_transaction_list
-  # end
+  # Cache the transactions response
+  def test_cached_transaction_list
+    assert_equal TransactionService.all_transactions, TransactionService.all_transactions, 'Should cache the response for speed'
+  end
 end
