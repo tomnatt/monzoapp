@@ -8,6 +8,7 @@ module TransactionService
   end
 
   def self.all_transactions
+    # TODO: maybe expire this?
     return @transactions if @transactions.present?
     @transactions = monzo_api.transactions
   end
