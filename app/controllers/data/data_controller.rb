@@ -1,4 +1,4 @@
-require 'chart_j_s_service'
+# require 'chart_j_s_service'
 
 # Serve data from service objects as JSON
 class Data::DataController < ApplicationController
