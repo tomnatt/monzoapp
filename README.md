@@ -2,7 +2,7 @@
 
 Playing with the Monzo API.
 
-Environment variables needed:
+Environment variables needed (not for test):
 * `MONZO_ACCOUNT_ID`
 * `MONZO_ACCESS_TOKEN`
 
@@ -11,6 +11,8 @@ Get these by logging into the [Monzo developer tool](https://developers.monzo.co
 ```
 bundle install
 bundle exec rails s
+
+bundle exec rake
 ```
 
 Ideas:
