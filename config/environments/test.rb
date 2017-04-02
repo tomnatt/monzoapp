@@ -39,4 +39,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Hard-code environment variables for test.
+  # Values do not matter, only that they are set.
+  ENV['MONZO_ACCOUNT_ID'] = 'something'
+  ENV['MONZO_ACCESS_TOKEN'] = 'something'
 end
