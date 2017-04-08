@@ -1,8 +1,8 @@
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("balance-by-day");
 
 $.getJSON('/data/byday', function(data) {
 
-  $('#wait-message').hide();
+  $('#balance-by-day-wait-message').hide();
 
   var moneyset = {
     label: 'Money',
