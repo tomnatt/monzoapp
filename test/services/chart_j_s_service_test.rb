@@ -3,6 +3,10 @@ require 'chart_j_s_service'
 
 # Test ChartJSService
 class ChartJSServiceTest < MockedTest
+  def setup
+    super('test/data/chart_j_s_service_test_data.json')
+  end
+
   # Scatter graph data should be formatted like this: http://www.chartjs.org/docs/#line-chart-scatter-line-charts
   def test_balance_by_day_for_scatter_graph
     balances = ChartJSService.balance_by_day_for_scatter_graph
