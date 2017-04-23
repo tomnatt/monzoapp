@@ -9,11 +9,13 @@ class ChartJSServiceTest < MockedTest
 
   # Scatter graph data should be formatted like this: http://www.chartjs.org/docs/#line-chart-scatter-line-charts
   def test_balance_by_day_for_scatter_graph
+    # Get transactions first to ensure we've got the right data, expiring any cached data
+    transactions = TransactionService.all_transactions(true)
+
     balances = ChartJSService.balance_by_day_for_scatter_graph
     assert_kind_of Array, balances
     assert_kind_of Hash, balances.first
 
-    transactions = TransactionService.all_transactions(true)
     date = transactions.first.created.strftime('%Y-%m-%d') # eg 2017-02-23
     balance = transactions.first.account_balance.cents / 100 # want this in pounds not pence
     first_balance = { x: date, y: balance }
