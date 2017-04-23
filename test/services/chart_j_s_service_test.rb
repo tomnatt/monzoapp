@@ -13,8 +13,9 @@ class ChartJSServiceTest < MockedTest
     assert_kind_of Array, balances
     assert_kind_of Hash, balances.first
 
-    date = TransactionService.all_transactions.first.created.strftime('%Y-%m-%d') # eg 2017-02-23
-    balance = TransactionService.all_transactions.first.account_balance.cents / 100 # want this in pounds not pence
+    transactions = TransactionService.all_transactions(true)
+    date = transactions.first.created.strftime('%Y-%m-%d') # eg 2017-02-23
+    balance = transactions.first.account_balance.cents / 100 # want this in pounds not pence
     first_balance = { x: date, y: balance }
     assert_equal first_balance, balances.first, 'Data should be of the form { x: 2017-02-23, y: 30 }'
   end
