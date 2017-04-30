@@ -9,7 +9,7 @@ module TransactionService
   end
 
   def self.all_transactions(expire_transactions = false)
-    return @transactions unless @transactions.blank? || expire_transactions
+    return @transactions unless @transactions.blank? || expire_transactions || ENV['MONZOAPP_DISABLE_CACHE']
     @transactions = monzo_api.transactions
   end
 end
