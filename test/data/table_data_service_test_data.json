@@ -1,9 +1,31 @@
 {
   "transactions": [
     {
+        "id": "fiahfuaho98fuhf98q",
+        "created": "2015-08-10T12:20:18Z",
+        "description": "Top up",
+        "amount": 10000,
+        "currency": "GBP",
+        "merchant": null,
+        "notes": "",
+        "metadata": {
+          "is_topup": "true"
+        },
+        "account_balance": 15255,
+        "attachments": [],
+        "category": "mondo",
+        "is_load": true,
+        "settled": "2015-08-10T12:20:18Z",
+        "local_amount": 10000,
+        "local_currency": "GBP",
+        "updated": "2015-08-10T12:20:18Z",
+        "originator": false,
+        "include_in_spending": false
+    },
+    {
       "account_balance": 15055,
       "amount": -200,
-      "created": "2015-08-10T12:20:18Z",
+      "created": "2015-08-11T12:20:18Z",
       "currency": "GBP",
       "description": "THE DE BEAUVOIR DELI C LONDON        GBR",
       "id": "blah1",
