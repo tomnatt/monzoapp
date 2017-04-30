@@ -47,6 +47,7 @@ group :test do
   gem 'webmock'
 end
 
+gem 'bootstrap'
 gem 'chronic'
 gem 'mondo'
 gem 'money'

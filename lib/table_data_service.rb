@@ -42,6 +42,6 @@ module TableDataService
   end
 
   def self.transaction_is_income?(transaction)
-    transaction.metadata['is_topup'] == 'true'
+    transaction.amount.positive?
   end
 end

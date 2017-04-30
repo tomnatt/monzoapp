@@ -15,6 +15,12 @@ bundle exec rails s
 bundle exec rake
 ```
 
+To disable caching of API responses during development:
+
+```
+MONZOAPP_DISABLE_CACHE=true bundle exec rails s
+```
+
 Ideas:
 
 * Spending by type by month in a doughnut chart (already in app)
