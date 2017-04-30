@@ -1,0 +1,30 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'by_day' %>
+<% end %>
+
+<h2>Balance by day</h2>
+<p id="balance-by-day-wait-message">Coming...</p>
+<canvas id="balance-by-day" width="1300" height="700">
+</canvas>
+
+<h2>Spending by week</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Week commencing</th>
+      <th>Income</th>
+      <th>Expenditure</th>
+      <th>Balance change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @transactions_by_week.each do |ebw| %>
+      <tr>
+        <td><%= ebw[:week] %></td>
+        <td><%= ebw[:income] %></td>
+        <td><%= ebw[:expenditure] %></td>
+        <td><%= ebw[:transactions] %></td>
+      </tr>
+    <%- end %>
+  </tbody>
+</table>

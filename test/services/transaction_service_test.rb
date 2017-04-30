@@ -17,7 +17,7 @@ class TransactionServiceTest < MockedTest
 
   # Check the transactions method works
   def test_get_all_transactions
-    transactions = TransactionService.all_transactions
+    transactions = TransactionService.all_transactions(true)
     assert transactions, 'Should not return nothing'
     refute transactions.empty?, 'There should be a transaction'
     assert_equal 2, transactions.length, 'There should be two transactions'
