@@ -1,5 +1,7 @@
 # Monzo app
 
+Core library ([mondo](https://github.com/monzo/mondo-ruby)) hasn't been updated since 2017 - this project is basically dead.
+
 Playing with the Monzo API.
 
 Environment variables needed (not for test):
